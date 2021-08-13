@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>多事件与多参与者预测</title>
+    <!-- 引入 ECharts 文件 -->
+    <script src="/t5/static/echarts.min.js"></script>
+    <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+</head>
+
+<body background="/t5/static/back.jpg">
+    <input id="calendar" max={{max}} min={{min}} onChange="draw_chart(this.value)" type="date" value={{default}} />
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="event_graph" style="width: 1600px;height:400px;"></div>
+    <div id="event" style="width: 1600px;height:400px;"></div>
+    <div>
+        <select id="select"></select>
+        <button type="button" id='btnShow' onclick="draw_actor_chart()" >Show</button>
+    </div>
+    <div id="actor" style="width: 1600px;height:400px;"></div>
+    <script src="/t5/static/draw.js"></script>
+</body>
+
+</html>
